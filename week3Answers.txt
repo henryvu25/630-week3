@@ -1,0 +1,20 @@
+1. The parent class is Spell. The child classes are Accio and Confundo.
+
+2. 1. The base class is Spell. The sub-classes are Accio and Confundo.
+
+3. The output:
+
+Summoning Charm
+Accio Summoning Charm
+No description
+Confundo Confundus Charm
+Causes the victim to become confused and befuddled.
+
+(I checked by running it and name and incantation are switched as parameters of the parent class. I kept my original answer)
+
+4. When study_spell(Confundo()) executes, Confundo's subclass method gets executed because any method that a subclass has with the same name overrides the parent method. However, the parent method does not get affected.
+
+5. I assume this question is asking to update the description. Add this method to the Accio subclass.
+
+def get_description(self):
+    return 'This charm summons an object to the caster, potentially over a significant distance'
